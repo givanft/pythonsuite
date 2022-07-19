@@ -1,7 +1,14 @@
 
 # Ask user for their name
-name = input("What's your name? ");
+name = input("What's your name? ").strip();
 
-#Say hello to user
-print("hello,");
-print(name);
+first, last = name.split(' ');
+
+"""
+Say hello 
+    to user
+"""
+print(f"hello, {first}"); 
+print(f"hello, {last}"); 
+
+# 1:45:37
