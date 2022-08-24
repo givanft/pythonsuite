@@ -1,3 +1,17 @@
+import json
+import requests
+import sys
+
+if len(sys.argv) != 2:
+    sys.exit()
+
+rs = requests.get("https://itunes.apple.com/search?entity=song&limit=10&term=" + sys.argv[1])
+
+#print(json.dumps(rs.json(), indent = 2))
+o = rs.json()
+for res in o["results"]:
+    print(res["trackName"])
+"""
 import sys
 import json
 
@@ -6,7 +20,7 @@ if len(sys.argv) < 3:
 
 print("hello, ", sys.argv[1:2])
 print(len(sys.argv))
-
+"""
 
 """
 #import random
