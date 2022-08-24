@@ -1,6 +1,6 @@
 """
 ========================================================================================
-	This is LITTLE PROFESSOR problem
+	This is BITCOIN PRICE INDEX problem
 
 	Implement a program that:
 
