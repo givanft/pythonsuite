@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b212174c-af5e-49d3-b231-b52d30696498</ProjectGuid>
+    <ProjectGuid>cbc0253f-2a5e-4986-9dab-f040af814c3e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Tests\test_hello_arguments.py</StartupFile>
+    <StartupFile>test_fuel\fuel.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>lecture5_unittests</Name>
-    <RootNamespace>lecture5_unittests</RootNamespace>
+    <Name>ProblemSet5</Name>
+    <RootNamespace>ProblemSet5</RootNamespace>
     <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -22,25 +22,29 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="hello.py" />
-    <Compile Include="lecture5_unittests.py" />
-    <Compile Include="Tests\hello.py" />
-    <Compile Include="Tests\test_hello_arguments.py">
+    <Compile Include="ProblemSet5.py" />
+    <Compile Include="test_bank\bank.py" />
+    <Compile Include="test_bank\test_bank.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Tests\test_hello_default.py">
+    <Compile Include="test_fuel\fuel.py" />
+    <Compile Include="test_fuel\test_fuel.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Tests\__init__.py" />
-    <Compile Include="test_hello.py">
+    <Compile Include="test_plates\test_plates.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="test_lecture5_unittests.py">
+    <Compile Include="test_plates\vanity_plates.py" />
+    <Compile Include="test_twttr\test_twttr.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_twttr\twttr.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Tests\" />
+    <Folder Include="test_fuel\" />
+    <Folder Include="test_plates\" />
+    <Folder Include="test_bank\" />
+    <Folder Include="test_twttr\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
