@@ -37,6 +37,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProblemSet6", "ProblemSet6\
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "lecture7_regex", "lecture7_regex\lecture7_regex.pyproj", "{1509FE0E-17E4-420C-9D5B-259AB5CA1AFF}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProblemSet7", "ProblemSet7\ProblemSet7.pyproj", "{A3845537-1462-4DCA-965C-4A2857821597}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,8 @@ Global
 		{82562B7E-7EF5-4FB8-A763-8D6576165397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1509FE0E-17E4-420C-9D5B-259AB5CA1AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1509FE0E-17E4-420C-9D5B-259AB5CA1AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3845537-1462-4DCA-965C-4A2857821597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3845537-1462-4DCA-965C-4A2857821597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
