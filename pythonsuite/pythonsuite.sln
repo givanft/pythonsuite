@@ -41,6 +41,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProblemSet7", "ProblemSet7\
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "lecture8_oop", "lecture8_oop\lecture8_oop.pyproj", "{96983877-6C44-4DD1-8D41-A86A5B48B065}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProblemSet8", "ProblemSet8\ProblemSet8.pyproj", "{FF74659C-6B10-4C2F-AFA4-3257740BA2E6}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "The_BOOK_OOP", "The_BOOK_OOP\The_BOOK_OOP.pyproj", "{0C352B0D-7D00-4FD0-909E-3C1B2F965A99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,10 @@ Global
 		{A3845537-1462-4DCA-965C-4A2857821597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96983877-6C44-4DD1-8D41-A86A5B48B065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96983877-6C44-4DD1-8D41-A86A5B48B065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF74659C-6B10-4C2F-AFA4-3257740BA2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF74659C-6B10-4C2F-AFA4-3257740BA2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C352B0D-7D00-4FD0-909E-3C1B2F965A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C352B0D-7D00-4FD0-909E-3C1B2F965A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
