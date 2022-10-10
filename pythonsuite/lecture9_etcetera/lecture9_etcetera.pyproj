@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>0c352b0d-7d00-4fd0-909e-3c1b2f965a99</ProjectGuid>
+    <ProjectGuid>5b167756-7823-436e-affa-39f2b526284f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Destructor\destr_oop.py</StartupFile>
+    <StartupFile>lecture9_etcetera.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>The_BOOK_OOP</Name>
-    <RootNamespace>The_BOOK_OOP</RootNamespace>
+    <Name>lecture9_etcetera</Name>
+    <RootNamespace>lecture9_etcetera</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,11 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Chapter2.py" />
-    <Compile Include="Destructor\destr_oop.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Destructor\" />
+    <Compile Include="lecture9_etcetera.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
