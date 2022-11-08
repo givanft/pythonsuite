@@ -1,9 +1,7 @@
 import sys
 from datetime import datetime
-from random import randint
 
 ALPHABET: set = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
-
 
 #==================
 # main
@@ -15,10 +13,10 @@ def main() -> None:
         case 1:
             msg = input("Message to be encrypted > ")
 
-            if is_alphabet_only(msg) == False:
+            if is_alphabet(msg) == False:
                 sys.exit("ERROR: The message contains not alphabet characters.")
 
-            encode_the_message(msg)
+            encode_message(msg)
         #''''''''''''''''''''''''''''''''''''
         case 2:
             msg = input("Message to be decrypted > ")
@@ -29,7 +27,7 @@ def main() -> None:
             except ValueError:
                 sys.exit("Time of encode is wrong. Be sure its format like '%d/%m/%Y, %H:%M:%S'")
 
-            decode_the_message(msg, dt)
+            decode_message(msg, time_of_encode)
         #''''''''''''''''''''''''''''''''''''
         case _:
             sys.exit()
@@ -69,13 +67,13 @@ def get_menu_choice() -> int:
 
 
 #==========================================
-# is_alphabet_only
-def is_alphabet_only(message: str) -> bool:
+# is_alphabet
+def is_alphabet(message: str) -> bool:
 #==========================================
     """ 
     Check if the ecrypted message has only alphabet characters and a space
  
-    :param: the encrypted message
+    :param: 'message' - The encrypted message
     :type: str
     :raise: None
     :return: 'True' if there are not only alphabet characters and 'False' otherwise
@@ -89,84 +87,58 @@ def is_alphabet_only(message: str) -> bool:
     return msg.isalpha()
 
 
-#======================================================
-# encode_the_message
-def encode_the_message(message_to_encrypt: str) -> None:
-#======================================================
+#===============================================
+# prepare_cipher_alphabet
+def prepare_cipher_alphabet(time_of_encode: str) -> list:
     """ 
-    Encode the message
+    Prepare cipher alphabet
  
-    :param: 'message_to_encrypt' - A message to be encrypted
+    :param: 'time_of_encode' -Time of encode the message,
     :type: str
     :raise: None
-    :return: None
-    :rtype: None
-    """
-    time_of_encode = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
-    cipher_key = get_cipher_key(time_of_encode)
-
-    cipher_abc = "".join(dict.fromkeys(cipher_key)) #remove duplicates
-    
-    # --------------------------------------------
-    abc: list = list(ALPHABET)  # set copy of the original alphabet
-    for c in cipher_abc:
-        abc.remove(c)   # remove duplicates from original alphabet
-    
-    # --------------------------------------------
-    for c in abc:
-        cipher_abc += c # concatenate original alphabet with cipher one
-
-    # --------------------------------------------
-    # get dictionary => 
-    #   key: original alphabet character
-    #   value: a character from cipher alphabet
-    abc_dict: dict = dict(zip(ALPHABET, list(cipher_abc)))
-
-    # --------------------------------------------
-    crypto_message: str = ""
-    for c in message_to_encrypt:
-        if c == ' ':
-            crypto_message += str(randint(0,9))
-        else:
-            crypto_message += abc_dict[c.lower()]
-
-    print(f"{crypto_message}")
-    print(f"{time_of_encode}")
-
-
-#=======================================
-# decode_the_message
-def decode_the_message(message_to_decrypt: str, time_of_encode: object):
-#=======================================
-    """ 
-    Decode the message
- 
-    :param: 
-        'message_to_decrypt' - A message to be decrypted,
-        'time_of_encode' - Time of encode the message
-    :type: str, object    
-    :raise: None
-    :return: None
-    :rtype: None
+    :return: list of the cipher alphabet
+    :rtype: list
     """
     cipher_key = get_cipher_key(time_of_encode)
+
     cipher_abc = "".join(dict.fromkeys(cipher_key))
-    
+
     # --------------------------------------------
     abc: list = list(ALPHABET)  # set copy of the original alphabet
     for c in cipher_abc:
         abc.remove(c)   # remove duplicates from original alphabet
-    
+
     # --------------------------------------------
     for c in abc:
         cipher_abc += c # concatenate original alphabet with cipher one
 
-    # --------------------------------------------
-    # get dictionary => 
-    #   key: original alphabet character
-    #   value: a character from cipher alphabet
-    abc_dict: dict = dict(zip(list(cipher_abc), ALPHABET))
-    pass
+    return cipher_abc
+
+
+#===============================================
+# prepare_crypto_message
+def prepare_crypto_message(message: str, abc: dict) -> str:
+    """ 
+    Convert original message to crypto and vice versa
+ 
+    :param: 'message' - A message to be decrypted or encrypted
+    :type: str
+    :param: 'abc' - A dictionary with original alphabet and cipher one
+    :type: dict
+    :raise: None
+    :return: result of encoding/decoding
+    :rtype: str
+    """
+    crypto_msg: str = ""
+
+    for c in message:
+        if c == ' ':
+            crypto_msg += ' '
+        else:
+            crypto_msg += abc[c.lower()]
+
+    return crypto_msg
+
 
 #======================================
 # get_string_by_number
@@ -175,10 +147,10 @@ def get_string_by_number(num: int) -> str:
     """ 
     Convert numeric value to string. Return one line. For example: 14 => fourteen, 49 => fortynine
  
-    :param: number to be converted
+    :param: 'num' - A number to be converted
     :type: str
     :raise: None
-    :return: One line string
+    :return: Result of the number conversation to strings
     :rtype: str
     """
     number_str_list: tuple = ("nil","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fifteen","twenty","thirty","forty","fifty")
@@ -228,7 +200,7 @@ def get_cipher_key(time_of_encode: str) -> str:
     """ 
     Assemble the cipher key.
  
-    :param: 'time_of_encode': Time of encode the message
+    :param: 'time_of_encode' - Time of encode the message
     :type: str
     :raise: None
     :return: A string (the chiper key) formated like SSMMHHDDDWMM (DW - Day of week)
@@ -239,13 +211,66 @@ def get_cipher_key(time_of_encode: str) -> str:
     month_of_year: str = dt.strftime('%B').lower() 
     day_of_week: str = dt.strftime('%A').lower()
     
-    # convert to int to avoid number line '00'
+    # convert to int to avoid number like '00'
     day_of_month: str = get_string_by_number(int(dt.strftime('%d').lower()))
     hour :str = get_string_by_number(int(dt.strftime('%H').lower()))
     minute :str = get_string_by_number(int(dt.strftime('%M').lower()))
     second :str = get_string_by_number(int(dt.strftime('%S').lower()))
 
     return second + minute + hour + day_of_month + day_of_week + month_of_year
+
+
+#======================================================
+# encode_message
+def encode_message(message_to_encrypt: str) -> None:
+#======================================================
+    """ 
+    Encode the message
+ 
+    :param: 'message_to_encrypt' - A message to be encrypted
+    :type: str
+    :raise: None
+    :return: None
+    :rtype: None
+    """
+    time_of_encode: str = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
+
+    cipher_abc = prepare_cipher_alphabet(time_of_encode)
+
+    # --------------------------------------------
+    # get dictionary => match original alphabet with cipher one
+    #   key: original alphabet character
+    #   value: cipher alphabet character
+    abc_dict: dict = dict(zip(ALPHABET, list(cipher_abc)))
+
+    print(f"{prepare_crypto_message(message_to_encrypt, abc_dict)}")
+    print(f"{time_of_encode}")
+
+
+#=======================================
+# decode_message
+def decode_message(message_to_decrypt: str, time_of_encode: str):
+#=======================================
+    """ 
+    Decode the message
+ 
+    :param: 'message_to_decrypt' - A message to be decrypted,
+    :type: str
+    :param: 'time_of_encode' - Time of encode the message
+    :type: str
+    :raise: None
+    :return: None
+    :rtype: None
+    """
+    cipher_abc = prepare_cipher_alphabet(time_of_encode)
+
+    # --------------------------------------------
+    # get dictionary => match cipher alphabet with original one
+    #   key: cipher alphabet character
+    #   value: original alphabet character
+    abc_dict: dict = dict(zip(list(cipher_abc), ALPHABET))
+
+    print(f"{prepare_crypto_message(message_to_decrypt, abc_dict)}")
 
 
 # ========================
