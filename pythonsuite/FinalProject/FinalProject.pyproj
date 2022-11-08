@@ -2,15 +2,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>263f158a-14f0-4374-91dc-9649e4d6eb22</ProjectGuid>
+    <ProjectGuid>f78deeac-b99d-47cd-8aa1-7144b691494b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>RSA\rsa.py</StartupFile>
+    <StartupFile>project.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>YouTube_lessons</Name>
-    <RootNamespace>YouTube_lessons</RootNamespace>
+    <Name>FinalProject</Name>
+    <RootNamespace>FinalProject</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,27 +22,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Alishev\oop.py" />
-    <Compile Include="GoshaDudar\lecture10_dictionary.py" />
-    <Compile Include="GoshaDudar\lecture10_oop.py" />
-    <Compile Include="GoshaDudar\lecture11_set.py" />
-    <Compile Include="GoshaDudar\lecture12_function.py" />
-    <Compile Include="GoshaDudar\lecture13_exception.py" />
-    <Compile Include="GoshaDudar\lecture9_tuple.py" />
-    <Compile Include="Alishev\dicts.py" />
-    <Compile Include="Alishev\lists.py" />
-    <Compile Include="Graphic_pygame\graph.py" />
-    <Compile Include="RSA\rsa.py" />
-    <Compile Include="YouTube_lessons.py" />
+    <Compile Include="project.py" />
+    <Compile Include="test_project.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GoshaDudar\" />
-    <Folder Include="Alishev\" />
-    <Folder Include="Graphic_pygame\" />
-    <Folder Include="RSA\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="GoshaDudar\TextFile1.txt" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
