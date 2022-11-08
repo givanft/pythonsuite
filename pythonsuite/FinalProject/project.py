@@ -1,3 +1,20 @@
+"""
+Example of usage:
+
+    ---------------------------------------------------------------
+    To encrypt:
+        Message to be encrypted > ivan gorshenin took introduction to python of harvard university
+
+    Get:
+        wlfd oarcnvdwd jaah wdjrayktjwad ja mxjnad ae nfrlfry kdwlvrcwjx
+        08/11/2022, 22:51:55
+
+    ---------------------------------------------------------------
+    To decrypt:
+        Message to be decrypted > wlfd oarcnvdwd jaah wdjrayktjwad ja mxjnad ae nfrlfry kdwlvrcwjx
+        Time of encode > 08/11/2022, 22:51:55
+"""
+
 import sys
 from datetime import datetime
 
