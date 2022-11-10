@@ -24,7 +24,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="D:\JD\project.py">
+    <Compile Include="c:\GIT\pythonsuite\pythonsuite\FinalProject\project.py">
       <Link>project.py</Link>
     </Compile>
     <Compile Include="test_project.py" />
