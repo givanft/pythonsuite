@@ -31,6 +31,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Report\Russ\Доклад.docx" />
+    <Content Include="Report\Russ\СЛАЙДЫ.pptx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+    <Folder Include="Report\Engl\" />
+    <Folder Include="Report\Russ\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
