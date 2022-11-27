@@ -51,6 +51,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "YouTube_lessons", "YouTube_
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "FinalProject", "FinalProject\FinalProject.pyproj", "{F78DEEAC-B99D-47CD-8AA1-7144B691494B}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "YandexAcademy", "YandexAcademy\YandexAcademy.pyproj", "{AD701A64-6FD8-4B48-B0F1-1F4B2D6A0A12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,8 @@ Global
 		{263F158A-14F0-4374-91DC-9649E4D6EB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F78DEEAC-B99D-47CD-8AA1-7144B691494B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F78DEEAC-B99D-47CD-8AA1-7144B691494B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD701A64-6FD8-4B48-B0F1-1F4B2D6A0A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD701A64-6FD8-4B48-B0F1-1F4B2D6A0A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

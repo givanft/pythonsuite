@@ -30,6 +30,9 @@
     <Compile Include="test_project.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="README.md" />
+    <Content Include="Report\Engl\ABC.xlsx" />
+    <Content Include="Report\Engl\Presentation.pptx" />
     <Content Include="requirements.txt" />
     <Content Include="Report\Russ\Доклад.docx" />
     <Content Include="Report\Russ\СЛАЙДЫ.pptx" />

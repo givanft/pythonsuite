@@ -251,6 +251,7 @@ def encode_message(message_to_encrypt: str) -> None:
     :rtype: None
     """
     time_of_encode: str = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
+    #time_of_encode = "14/11/2022, 09:01:08" # use it for test/debugging
 
     cipher_abc = prepare_cipher_alphabet(time_of_encode)
 
