@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ad701a64-6fd8-4b48-b0f1-1f4b2d6a0a12</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>task2.1\task_t.py</StartupFile>
+    <StartupFile>task2.4\task_c.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -29,8 +29,16 @@
     <Compile Include="task2.1\task_s.py" />
     <Compile Include="task2.1\task_t.py" />
     <Compile Include="task2.2\task_o.py" />
+    <Compile Include="task2.3\task_r.py" />
+    <Compile Include="task2.3\task_s.py" />
+    <Compile Include="task2.4\introduction.py" />
+    <Compile Include="task2.4\task_c.py" />
+    <Compile Include="task2.4\task_b.py" />
+    <Compile Include="task2.4\task_a.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="task2.4\" />
+    <Folder Include="task2.3\" />
     <Folder Include="task2.2\" />
     <Folder Include="task2.1\" />
   </ItemGroup>
