@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ad701a64-6fd8-4b48-b0f1-1f4b2d6a0a12</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>task2.4\task_c.py</StartupFile>
+    <StartupFile>task2.4\task_j.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,10 +28,38 @@
     <Compile Include="task2.1\task_q.py" />
     <Compile Include="task2.1\task_s.py" />
     <Compile Include="task2.1\task_t.py" />
+    <Compile Include="task2.2\task2.2_e.py" />
+    <Compile Include="task2.2\task2.2_f.py" />
+    <Compile Include="task2.2\task2.2_g.py" />
+    <Compile Include="task2.2\task2.2_j.py" />
+    <Compile Include="task2.2\task2.2_k.py" />
+    <Compile Include="task2.2\task2.2_l.py" />
+    <Compile Include="task2.2\task2.2_m.py" />
+    <Compile Include="task2.2\task2.2_o.py" />
+    <Compile Include="task2.2\task2.2_p.py" />
+    <Compile Include="task2.2\task2.2_q.py" />
+    <Compile Include="task2.2\task2.2_r.py" />
+    <Compile Include="task2.2\task2.2_s.py" />
+    <Compile Include="task2.2\task2.2_t.py" />
     <Compile Include="task2.2\task_o.py" />
+    <Compile Include="task2.3\task_f_nod.py" />
+    <Compile Include="task2.3\task_g_nok.py" />
+    <Compile Include="task2.3\task_j.py" />
+    <Compile Include="task2.3\task_k.py" />
+    <Compile Include="task2.3\task_m.py" />
+    <Compile Include="task2.3\task_n.py" />
+    <Compile Include="task2.3\task_o.py" />
+    <Compile Include="task2.3\task_p.py" />
+    <Compile Include="task2.3\task_q.py" />
     <Compile Include="task2.3\task_r.py" />
     <Compile Include="task2.3\task_s.py" />
     <Compile Include="task2.4\introduction.py" />
+    <Compile Include="task2.4\task_j.py" />
+    <Compile Include="task2.4\task_i.py" />
+    <Compile Include="task2.4\task_h.py" />
+    <Compile Include="task2.4\task_g.py" />
+    <Compile Include="task2.4\task_f.py" />
+    <Compile Include="task2.4\task_e.py" />
     <Compile Include="task2.4\task_c.py" />
     <Compile Include="task2.4\task_b.py" />
     <Compile Include="task2.4\task_a.py" />
