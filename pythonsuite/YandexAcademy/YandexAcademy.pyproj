@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ad701a64-6fd8-4b48-b0f1-1f4b2d6a0a12</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>task2.4\task_j.py</StartupFile>
+    <StartupFile>task2.4\task_l.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -54,6 +54,8 @@
     <Compile Include="task2.3\task_r.py" />
     <Compile Include="task2.3\task_s.py" />
     <Compile Include="task2.4\introduction.py" />
+    <Compile Include="task2.4\task_l.py" />
+    <Compile Include="task2.4\task_k.py" />
     <Compile Include="task2.4\task_j.py" />
     <Compile Include="task2.4\task_i.py" />
     <Compile Include="task2.4\task_h.py" />
